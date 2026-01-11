@@ -25,7 +25,7 @@ function renderTodo(todo) {
 
     const delbut = document.createElement("button"); //create a delete button for each list item
     delbut.classList.add("delete");
-    delbut.textContent = "Delete";
+    delbut.textContent = "x";
 
     const donebut = document.createElement("button") //create a finished button for each list item
     donebut.classList.add("finished");
