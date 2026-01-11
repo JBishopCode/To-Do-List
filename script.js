@@ -31,7 +31,11 @@ function renderTodo(todo) {
     donebut.classList.add("finished");
     donebut.textContent = todo.done ? "Unfinished" : "Finished";
 
-    item.append(donebut, todo.text, delbut); 
+    const textSpan = document.createElement("span"); //create a span with a class to append elements without manual spaces
+    textSpan.className = "todo-text";
+    textSpan.textContent = todo.text;
+
+    item.append(donebut, textSpan, delbut); 
     list.append(item); //append items to the unordered list (ul)
 }
 
